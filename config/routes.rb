@@ -6,8 +6,6 @@ Rails.application.routes.draw do
 		resources :comments
 	end
 
-	mount ActionCable.server => '/cable'
-
 	require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'
 end
